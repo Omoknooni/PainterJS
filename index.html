@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/1416/PNG/512/software-paintbrush_97929.png">
+    <title>PainterJS</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="controller">
+        <div class="size">
+            <span id="size_val">2.0</span>
+            <input type="range" id="paint_size" min="0.1" max="10.0" value="2.0" step="0.1" onchange="getSizeValue(this)">
+        </div>
+        <div class="btn_panel">
+            <button id="control_fill">Fill</button>
+            <button id="control_clear">Clear</button>
+            <button id="control_save">Save as</button>
+        </div>
+        <div class="colors">
+            <div class="color" style="background-color: black;" data-toggle="tooltip" data-placement="top" title="BLACK"></div>
+            <div class="color" style="background-color: blue;" data-toggle="tooltip" data-placement="top" title="BLUE"></div>
+            <div class="color" style="background-color: red;" data-toggle="tooltip" data-placement="top" title="RED"></div>
+            <div class="color" style="background-color: yellow;" data-toggle="tooltip" data-placement="top" title="YELLOW"></div>
+            <div class="color" style="background-color: green;" data-toggle="tooltip" data-placement="top" title="GREEN"></div>
+            <div class="color" style="background-color: white;" data-toggle="tooltip" data-placement="top" title="WHITE"></div>
+            <div class="color" style="background-color: orange;" data-toggle="tooltip" data-placement="top" title="ORANGE"></div>
+            <div class="color" style="background-color: pink;" data-toggle="tooltip" data-placement="top" title="PINK"></div>
+            <div class="color" style="background-color: purple;" data-toggle="tooltip" data-placement="top" title="PURPLE"></div>
+            <div class="color" style="background-color: olive;" data-toggle="tooltip" data-placement="top" title="OLIVE"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

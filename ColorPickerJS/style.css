@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+.btn {
+    background: none;
+    color: black;
+    font-size: 1em;
+    padding: 15px 60px;
+    margin: 10% auto;
+    max-width: 200px;
+    outline: springgreen;
+    display: block;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: aliceblue;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 20%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: cyan;
+    border: 2px solid white;
+    color: white;
+    font-size: 2em;
+}
+
+.box:hover {
+    transform: scale(1.25);
+    transition: 0.25s;
+}
+
+.description {
+    font-size: 15px;
+}
